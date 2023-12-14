@@ -24,9 +24,14 @@ public class MyController {
 		List<Food> lsDesserts = frepo.findByCid(new Category(2));
 		List<Food> lsDrinks = frepo.findByCid(new Category(3));
 		
-		System.err.println(lsMain.size());
-		System.err.println(lsDesserts.size());
-		System.err.println(lsDrinks.size());
+//		System.err.println(lsMain.size());
+//		System.err.println(lsDesserts.size());
+//		System.err.println(lsDrinks.size());
+		
+		mod.addAttribute("lsMain",lsMain);
+		mod.addAttribute("lsDesserts",lsDesserts);
+		mod.addAttribute("lsDrinks",lsDrinks);
+		
 		
 		return "index";
 	}

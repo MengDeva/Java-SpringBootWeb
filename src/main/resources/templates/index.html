@@ -60,22 +60,18 @@ Events</a></li>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
+                        <li th:each="food, i : ${lsMain}" th:if="${i.index %2==0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
-                        <li>Main Burger<span class="price">$15</span></li>
+                        <li th:each="food, i : ${lsMain}" th:if="${i.index %2!=0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 </div> <!-- main id end -->
@@ -86,22 +82,18 @@ Events</a></li>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li th:each="food, i : ${lsDesserts}" th:if="${i.index %2==0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
-                        <li>Tasty Dessert<span class="price">$9</span></li>
+                        <li th:each="food, i : ${lsDesserts}" th:if="${i.index %2!=0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 </div> <!-- main id end -->
@@ -112,22 +104,18 @@ Events</a></li>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li th:each="food, i : ${lsDrinks}" th:if="${i.index %2==0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 <div class="half">
                     <ul>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
-                        <li>Craft Beer<span class="price">$7</span></li>
+                        <li th:each="food, i : ${lsDrinks}" th:if="${i.index %2!=0}">
+							<div th:remove="tag" th:text="${food.name}">Main Burger</div>
+							<span class="price" th:text="'$'+${food.price}">$15</span>
+						</li>
                     </ul>
                 </div>
                 </div> <!-- main id end -->
